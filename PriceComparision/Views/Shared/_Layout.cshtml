@@ -7,10 +7,31 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/PriceComparision.styles.css" asp-append-version="true" />
+    <style>
+        /* Dodatkowe style kolorystyczne */
+        body {
+            background-color: #f8f9fa; /* Jasnoszary tło */
+            color: #343a40; /* Ciemny kolor tekstu */
+        }
+
+        header {
+            background-color: #007bff; /* Niebieskie tło dla nagłówka */
+        }
+
+        .navbar-brand,
+        .navbar-nav .nav-link {
+            color: #ffffff !important; /* Biały kolor tekstu dla linków */
+        }
+
+        .footer {
+            background-color: #f8f9fa; /* Jasnoszary tło stopki */
+            padding: 10px 0; /* Dodatkowy padding dla stopki */
+        }
+    </style>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-primary border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">PriceComparision</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -20,10 +41,10 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                     </ul>
                 </div>

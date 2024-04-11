@@ -1,8 +1,8 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model IEnumerable<PriceComparision.Models.Product>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<h2>PRICE COMPARISION SITE</h2>
+
+<form method="GET" asp-controller="Home" asp-action="Search">
+	<input type="text" name="phrase" placeholder="enter product name" />
+	<input type="submit" value="Search" />
+</form>

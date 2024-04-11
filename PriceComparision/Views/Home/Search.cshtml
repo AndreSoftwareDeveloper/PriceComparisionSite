@@ -1,0 +1,39 @@
+﻿@model IEnumerable<PriceComparision.Models.Product>
+
+<h2>Search results:</h2><br />
+<br />
+@if (Model.Any())
+{
+    <h4>The lowest price:</h4>
+    var lowestPriceProduct = Model.FirstOrDefault();
+    <p>
+        <pre>
+            <b>Name:</b> @lowestPriceProduct.Name
+            <b>Price:</b> @lowestPriceProduct.Price
+            <b>Shop:</b> @lowestPriceProduct.Shop<br /> 
+        </pre>
+   </p>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Shop</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model)
+            {
+                <tr>
+                    <td>@product.Name</td>
+                    <td>@product.Price</td>
+                    <td>@product.Shop</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No matching products.</p>
+}
